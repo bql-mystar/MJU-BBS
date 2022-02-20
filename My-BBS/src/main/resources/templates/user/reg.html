@@ -122,6 +122,7 @@
                 success: function (result) {
                     if (result.resultCode == 200) {
                         layer.alert('注册成功!', {title: '信息', skin: 'layui-layer-molv', icon: 1});
+                        window.location.href="/login.html";
                     } else {
                         layer.msg(result.message);
                     }

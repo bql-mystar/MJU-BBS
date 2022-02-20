@@ -204,7 +204,7 @@
                             <div class="layui-form-mid">
                              <span><img data-tooltip="看不清楚？换一张"
                                         th:src="@{/common/captcha}"
-                                        onclick="this.src='/common/captcha?d='+new Date()*1"
+                                        onclick="this.src='/common/captcha?d='+new Date()*1" <!-- 浏览器默认自带缓存，访问同一个url时，会先查找缓存中是否有对应的访问记录，如果有则直接返回，不会进行访问，那么验证码无法进行更新，因此要对url进行适当的变化，可以在url后面加上当前时间，对url进行变化即可 -->
                                         alt="单击图片刷新！"></span>
                             </div>
                         </div>
@@ -234,29 +234,6 @@
                     </th:block>
                 </th:block>
             </dl>
-
-<!--            <div class="fly-panel">-->
-<!--                <div class="fly-panel-title">-->
-<!--                    我的公众号-->
-<!--                </div>-->
-<!--                <div class="fly-panel-main">-->
-<!--                    <a href="https://juejin.im/user/59199e22a22b9d0058279886" target="_blank">-->
-<!--                        <img style="max-width: 100%;" th:src="@{/images/my-gzh-qrcode.jpg}">-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="fly-panel">-->
-<!--                <div class="fly-panel-title">-->
-<!--                    我的新书-->
-<!--                </div>-->
-<!--                <div class="fly-panel-main">-->
-<!--                    <a href="https://item.jd.com/12890115.html" target="_blank">-->
-<!--                        <img style="max-width: 100%;" th:src="@{/images/my-book01.png}">-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-
         </div>
     </div>
 </div>
