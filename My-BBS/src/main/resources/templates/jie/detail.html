@@ -49,7 +49,7 @@
                     </a>
                     <div class="fly-detail-user">
                         <a th:href="@{${'/userCenter/'+bbsUser.userId}}" class="fly-link">
-                            <cite th:text="${bbsUser.nickName}">程序员十三</cite>
+                            <cite th:text="${bbsUser.nickName}">Rongz</cite>
                             <span>
                               <th:block th:if="${bbsUser.userStatus==0}">账号正常
                               </th:block>
@@ -109,7 +109,7 @@
                                     <div class="fly-detail-user">
                                         <a th:href="@{${'/userCenter/'+bbsCommentListEntity.commentUserId}}"
                                            class="fly-link">
-                                            <cite th:text="${bbsCommentListEntity.nickName}">程序员十三</cite>
+                                            <cite th:text="${bbsCommentListEntity.nickName}">程序员Rongz</cite>
                                         </a>
                                     </div>
                                     <div class="detail-hits">
@@ -235,27 +235,27 @@
                 </th:block>
             </dl>
 
-            <div class="fly-panel">
-                <div class="fly-panel-title">
-                    我的公众号
-                </div>
-                <div class="fly-panel-main">
-                    <a href="https://juejin.im/user/59199e22a22b9d0058279886" target="_blank">
-                        <img style="max-width: 100%;" th:src="@{/images/my-gzh-qrcode.jpg}">
-                    </a>
-                </div>
-            </div>
+<!--            <div class="fly-panel">-->
+<!--                <div class="fly-panel-title">-->
+<!--                    我的公众号-->
+<!--                </div>-->
+<!--                <div class="fly-panel-main">-->
+<!--                    <a href="https://juejin.im/user/59199e22a22b9d0058279886" target="_blank">-->
+<!--                        <img style="max-width: 100%;" th:src="@{/images/my-gzh-qrcode.jpg}">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <div class="fly-panel">
-                <div class="fly-panel-title">
-                    我的新书
-                </div>
-                <div class="fly-panel-main">
-                    <a href="https://item.jd.com/12890115.html" target="_blank">
-                        <img style="max-width: 100%;" th:src="@{/images/my-book01.png}">
-                    </a>
-                </div>
-            </div>
+<!--            <div class="fly-panel">-->
+<!--                <div class="fly-panel-title">-->
+<!--                    我的新书-->
+<!--                </div>-->
+<!--                <div class="fly-panel-main">-->
+<!--                    <a href="https://item.jd.com/12890115.html" target="_blank">-->
+<!--                        <img style="max-width: 100%;" th:src="@{/images/my-book01.png}">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
 
         </div>
     </div>
