@@ -202,9 +202,10 @@
                                        placeholder="请输入验证码" autocomplete="off" class="layui-input">
                             </div>
                             <div class="layui-form-mid">
+                                <!-- 浏览器默认自带缓存，访问同一个url时，会先查找缓存中是否有对应的访问记录，如果有则直接返回，不会进行访问，那么验证码无法进行更新，因此要对url进行适当的变化，可以在url后面加上当前时间，对url进行变化即可 -->
                              <span><img data-tooltip="看不清楚？换一张"
                                         th:src="@{/common/captcha}"
-                                        onclick="this.src='/common/captcha?d='+new Date()*1" <!-- 浏览器默认自带缓存，访问同一个url时，会先查找缓存中是否有对应的访问记录，如果有则直接返回，不会进行访问，那么验证码无法进行更新，因此要对url进行适当的变化，可以在url后面加上当前时间，对url进行变化即可 -->
+                                        onclick="this.src='/common/captcha?d='+new Date()*1"
                                         alt="单击图片刷新！"></span>
                             </div>
                         </div>
