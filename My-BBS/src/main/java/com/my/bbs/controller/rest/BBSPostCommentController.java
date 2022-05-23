@@ -40,7 +40,7 @@ public class BBSPostCommentController {
             return ResultGenerator.genFailResult("评论内容过长");
         }
         String kaptchaCode = httpSession.getAttribute(Constants.VERIFY_CODE_KEY) + "";
-        if (!StringUtils.hasLength(kaptchaCode) || !verifyCode.equals(kaptchaCode)) {
+        if (!StringUtils.hasLength(kaptchaCode) || !verifyCode.equalsIgnoreCase(kaptchaCode)) {
             return ResultGenerator.genFailResult(ServiceResultEnum.LOGIN_VERIFY_CODE_ERROR.getResult());
         }
         BBSUser bbsUser = (BBSUser) httpSession.getAttribute(Constants.USER_SESSION_KEY);

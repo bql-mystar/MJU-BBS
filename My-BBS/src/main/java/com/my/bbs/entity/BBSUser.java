@@ -1,11 +1,12 @@
 package com.my.bbs.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 论坛用户-实体类
  */
-public class BBSUser {
+public class BBSUser implements Serializable {
     private Long userId;
 
     private String loginName;

@@ -204,7 +204,7 @@ public class BBSUserController {
             return ResultGenerator.genFailResult(ServiceResultEnum.LOGIN_VERIFY_CODE_NULL.getResult());
         }
         String kaptchaCode = httpSession.getAttribute(Constants.VERIFY_CODE_KEY) + "";
-        if (!StringUtils.hasLength(kaptchaCode) || !verifyCode.equals(kaptchaCode)) {
+        if (!StringUtils.hasLength(kaptchaCode) || !verifyCode.equalsIgnoreCase(kaptchaCode)) {
             return ResultGenerator.genFailResult(ServiceResultEnum.LOGIN_VERIFY_CODE_ERROR.getResult());
         }
         String registerResult = bbsUserService.register(loginName, password, nickName);
@@ -237,7 +237,7 @@ public class BBSUserController {
             return ResultGenerator.genFailResult(ServiceResultEnum.LOGIN_VERIFY_CODE_NULL.getResult());
         }
         String kaptchaCode = httpSession.getAttribute(Constants.VERIFY_CODE_KEY) + "";
-        if (!StringUtils.hasLength(kaptchaCode) || !verifyCode.equals(kaptchaCode)) {
+        if (!StringUtils.hasLength(kaptchaCode) || !verifyCode.equalsIgnoreCase(kaptchaCode)) {
             return ResultGenerator.genFailResult(ServiceResultEnum.LOGIN_VERIFY_CODE_ERROR.getResult());
         }
         String loginResult = bbsUserService.login(loginName, MD5Util.MD5Encode(password, "UTF-8"), httpSession);

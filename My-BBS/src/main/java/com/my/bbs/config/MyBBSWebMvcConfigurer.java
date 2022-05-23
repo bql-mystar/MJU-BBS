@@ -14,6 +14,7 @@ public class MyBBSWebMvcConfigurer implements WebMvcConfigurer {
     @Autowired
     private MyBBSLoginInterceptor myBBSLoginInterceptor;
 
+    @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 登陆拦截
         registry.addInterceptor(myBBSLoginInterceptor)
@@ -37,6 +38,7 @@ public class MyBBSWebMvcConfigurer implements WebMvcConfigurer {
                 .addPathPatterns("/userSet");
     }
 
+    @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/upload/**").addResourceLocations("file:" + Constants.FILE_UPLOAD_DIC);
     }
